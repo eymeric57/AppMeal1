@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="navBar">
+            <ul id="firstul">
+                <li class="first" id="menu">Menu</li>
+                <li class="first "id="creation">Création</li>
+                <li class="first" id="liste">Liste</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="title">
+        <h1>Repas de la Semaine</h1>
+    </div>
+
+    <div class="card" id="card0">
+        <div class="card1" id="card1">
+            <h2>Midi</h2>
+            <div id="menumidi1">
+            </div>
+            <h3>Soir</h3>
+            <div id="menusoir1"></div>
+        </div>
+    </div>
+
+    <div class="card" id="card2">
+        <div class="card1" id="card1">
+            <h2>Midi</h2>
+            <div id="menumidi2">
+            </div>
+            <h3>Soir</h3>
+            <div id="menusoir2"></div>
+        </div>
+    </div>
+
+    <div class="card" id="card3">
+        <div class="card1" id="card1">
+            <h2>Midi</h2>
+            <div id="menumidi3">
+            </div>
+            <h3>Soir</h3>
+            <div id="menusoir3"></div>
+        </div>
+    </div>
+
+    <div class="card" id="card4">
+        <div class="card1" id="card1">
+            <h2>Midi</h2>
+            <div id="menumidi4">
+            </div>
+            <h3>Soir</h3>
+            <div id="menusoir4"></div>
+        </div>
+    </div>
+
+
+    <div class="card" id="card5">
+        <div class="card1" id="card1">
+            <h2>Midi</h2>
+            <div id="menumidi5">
+            </div>
+            <h3>Soir</h3>
+            <div id="menusoir5"></div>
+        </div>
+    </div>
+
+    <div class="card" id="card6">
+        <div class="card1" id="card1">
+            <h2>Midi</h2>
+            <div id="menumidi6">
+            </div>
+            <h3>Soir</h3>
+            <div id="menusoir6"></div>
+        </div>
+    </div>
+
+    <div class="card" id="card7">
+        <div class="card1" id="card1">
+            <h2>Midi</h2>
+            <div id="menumidi7">
+            </div>
+            <h3>Soir</h3>
+            <div id="menusoir7"></div>
+        </div>
+    </div>
+
+    <div class="weekday">
+        <button id="b1">Lu</button>
+        <button id="b2">Ma</button>
+        <button id="b3">Me</button>
+        <button id="b4">Je</button>
+        <button id="b5">Ve</button>
+        <button id="b6">Sa</button>
+        <button id="b7">Di</button>
+    </div>
+
+
+
+
+    <div class="ProgPart">
+        <div class="boxDay">
+
+            <h1>Repas</h1>
+
+            <div class="Day">
+
+
+                <div class="Lundi" id="lu">
+                    <p>Lu</p>
+                    <input type="checkbox" name="" id="d1">
+                </div>
+
+                <div class="Mardi" id="ma">
+                    <p>Ma </p>
+                    <input type="checkbox" name="" id="d2">
+                </div>
+
+                <div class="Mercredi" id="me">
+                    <p>Me</p>
+                    <input type="checkbox" name="" id="d3">
+                </div>
+
+                <div class="Jeudi" id="je">
+                    <p>Je </p>
+                    <input type="checkbox" name="" id="d4">
+                </div>
+
+                <div class="Vendredi" id="ve">
+                    <p>Ve</p>
+                    <input type="checkbox" name="" id="d5">
+                </div>
+
+                <div class="Samedi" id="sa">
+                    <p>Sa</p>
+                    <input type="checkbox" name="" id="d6">
+                </div>
+
+                <div class="Dimanche" id="di">
+                    <p>Di</p>
+                    <input type="checkbox" name="" id="d7">
+                </div>
+            </div>
+
+            <div class="DayForm">
+                <h2>Midi</h2>
+                <input type="text" id="Midi" placeholder="Midi">
+                <h2>Soir</h2>
+                <input type="text" id="Soir" placeholder="Soir">
+            </div>
+
+            <div class="checkbox">
+                <input type="submit" id="submit" value="Valider">
+            </div>
+
+            <div class="refresh" id="refresh">
+                <i class="fa-solid fa-rotate" id="refreshArrow"></i>
+            </div>
+
+        </div>
+    </div>
+
+    <section>
+        <div class="Listbox">
+            <h1>Liste</h1>
+            <div class="inputList">
+
+                <input type="text" autocomplete="off" placeholder="Liste de course" id="inputList">
+                <div class="btnList" id="btnList"><i class="fa-solid fa-plus"id="addList"></i></div>
+
+            </div>
+            <div class="checkList">
+            <div class="frais">
+                
+                <input type="checkbox" name="Frais" id="cheli1" style="width:18px; height:18px;">
+                <label for="cheli1" aria-describedby="label">Frais</label>
+            </div>
+            <div class="sec">
+                
+                <input type="checkbox" name="sec" id="cheli2" style="width:18px; height:18px;">
+                <label for="cheli2" aria-describedby="label">Sec</label>
+            </div>
+            <div class="autre">
+                
+                <input type="checkbox" name="autre" id="cheli3" style="width:18px; height:18px;">
+                <label for="cheli3" aria-describedby="label">Autre</label>
+            </div>
+        </div>
+
+
+            <ul id="ListLiF">
+
+            </ul>
+            <ul id="ListLiS">
+            </ul>
+
+            <ul id="ListLiA">
+                
+            </ul>
+
+        </div>
+
+
+
+        </div>
+
+    </section>
+    <script src="index.js"></script>
+</body>
+
+</html>
