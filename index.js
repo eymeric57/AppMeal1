@@ -38,7 +38,7 @@ d7.style.pointerEvents = "none";
 
 ////////////////////////Local Storage
 
-function storeList() {
+function storeMeals() {
   window.localStorage.midi1 = menumidi1.innerHTML;
   window.localStorage.soi1 = menusoir1.innerHTML;
 
@@ -61,7 +61,7 @@ function storeList() {
   window.localStorage.soi7 = menusoir7.innerHTML;
 }
 
-function getTodos() {
+function getMeals() {
   menumidi1.innerHTML = window.localStorage.midi1 || "";
   menusoir1.innerHTML = window.localStorage.soi1 || "";
 
@@ -84,7 +84,7 @@ function getTodos() {
   menusoir7.innerHTML = window.localStorage.soi7 || "";
 }
 
-getTodos();
+getMeals();
 
 let lundiValue = localStorage.getItem("lundi");
 if (lundiValue) {
@@ -143,7 +143,13 @@ refreshArrow.addEventListener("click", () => {
     confirm("Êtes-vous sûr de vouloir supprimer les plats de la semaine ?") ==
     true
   ) {
-    localStorage.clear();
+    localStorage.removeItem('lundi');
+    localStorage.removeItem('mardi');
+    localStorage.removeItem('mercredi');
+    localStorage.removeItem('jeudi');
+    localStorage.removeItem('vendredi');
+    localStorage.removeItem('samedi');
+    localStorage.removeItem('dimanche');
     location.reload();
   } else {
   }
@@ -243,12 +249,13 @@ dayoff();
 
 ///////////////////////////EventListener routine//////////////////////////////////
 
+
 submit.addEventListener("click", () => {
   if (d1.checked && !isExecuted1) {
     update1();
     Midi.value = "";
     Soir.value = "";
-    storeList();
+    storeMeals();
     lu.style.backgroundColor = "green";
     d1.disabled = true;
     enableElements(["d2"]);
@@ -259,7 +266,7 @@ submit.addEventListener("click", () => {
     update2();
     Midi.value = "";
     Soir.value = "";
-    storeList();
+    storeMeals();
     ma.style.backgroundColor = "green";
     d2.disabled = true;
     enableElements(["d3"]);
@@ -270,7 +277,7 @@ submit.addEventListener("click", () => {
     update3();
     Midi.value = "";
     Soir.value = "";
-    storeList();
+    storeMeals();
     me.style.backgroundColor = "green";
     d3.disabled = true;
     enableElements(["d4"]);
@@ -281,7 +288,7 @@ submit.addEventListener("click", () => {
     update4();
     Midi.value = "";
     Soir.value = "";
-    storeList();
+    storeMeals();
     je.style.backgroundColor = "green";
     d4.disabled = true;
     enableElements(["d5"]);
@@ -292,7 +299,7 @@ submit.addEventListener("click", () => {
     update5();
     Midi.value = "";
     Soir.value = "";
-    storeList();
+    storeMeals();
     ve.style.backgroundColor = "green";
     d5.disabled = true;
     enableElements(["d6"]);
@@ -303,7 +310,7 @@ submit.addEventListener("click", () => {
     update6();
     Midi.value = "";
     Soir.value = "";
-    storeList();
+    storeMeals();
     sa.style.backgroundColor = "green";
     d6.disabled = true;
     enableElements(["d7"]);
@@ -314,7 +321,7 @@ submit.addEventListener("click", () => {
     update7();
     Midi.value = "";
     Soir.value = "";
-    storeList();
+    storeMeals();
     di.style.backgroundColor = "green";
     d7.disabled = true;
     isExecuted7 = true;
@@ -407,58 +414,115 @@ b7.addEventListener("click", (e) => {
 
 /////////////////////////////////////////////////////////
 /////////////////////List /////////////////
+
+function storeList() {
+  window.localStorage.ListLiF = ListLiF.innerHTML;
+  window.localStorage.ListLiS = ListLiS.innerHTML;
+  window.localStorage.ListLiA = ListLiA.innerHTML;
+}
+
+function getList() {
+  ListLiF.innerHTML = window.localStorage.ListLiF || "";
+  ListLiS.innerHTML = window.localStorage.ListLiS || "";
+  ListLiA.innerHTML = window.localStorage.ListLiA || "";
+}
+
+getList();
+
 function checkLi1() {
-  if (cheli1.checked){
-    cheli2.checked = false
-    cheli3.checked = false
+  if (cheli1.checked) {
+    cheli2.checked = false;
+    cheli3.checked = false;
   }
 }
 function checkLi2() {
-  if (cheli2.checked){
-    cheli1.checked = false
-    cheli3.checked = false
+  if (cheli2.checked) {
+    cheli1.checked = false;
+    cheli3.checked = false;
   }
 }
 function checkLi3() {
-  if (cheli3.checked){
-    cheli1.checked = false
-    cheli2.checked = false
+  if (cheli3.checked) {
+    cheli1.checked = false;
+    cheli2.checked = false;
   }
 }
 
-cheli1.addEventListener('change',checkLi1)
-checkLi1() 
-cheli2.addEventListener('change',checkLi2)
-checkLi2() 
-cheli3.addEventListener('change',checkLi3)
-checkLi3() 
-
-
-
-
-
+cheli1.addEventListener("change", checkLi1);
+checkLi1();
+cheli2.addEventListener("change", checkLi2);
+checkLi2();
+cheli3.addEventListener("change", checkLi3);
+checkLi3();
 
 inputList.addEventListener("input", (e) => {
   List = e.target.value;
-
 });
 
 btnList.addEventListener("click", () => {
   if (cheli1.checked) {
-    ListLiF.innerHTML += `<li>${List}</li>`;
-    inputList.value=""
-  } 
-  else if (cheli2.checked) {
-    ListLiS.innerHTML += `<li>${List}</li>`;
-  }
-   else if (cheli3.checked) {
-    ListLiA.innerHTML += `<li>${List}</li>`;
+    ListLiF.innerHTML += `<li class="Hoverable"> ${List}</li>`;
+    inputList.value = "";
+    inputList.focus();
+   
+    storeList();
+   console.log(inputList.value);
+
+  } else if (cheli2.checked) {
+    ListLiS.innerHTML += `<li class="Hoverable"> ${List}</li>`;
+    localStorage.getItem('l2')
+    inputList.value = "";
+    inputList.focus();
+    storeList();
+  } else if (cheli3.checked) {
+    ListLiA.innerHTML += `<li class="Hoverable"> ${List}</li>`;
+    localStorage.getItem('l3')
+    inputList.value = "";
+    inputList.focus();
+    storeList();
   } else {
-    alert("cocher une case")
+    alert("cocher une case");
   }
-
-
-  
 });
 
+ListLiF.addEventListener("click", (e) => {
+  if (e.target.classList.contains("checked")) {
+    e.target.remove();
+  } else {
+    e.target.classList.add("checked");
+  }
+});
+
+ListLiS.addEventListener("click", (e) => {
+  if (e.target.classList.contains("checked")) {
+    e.target.remove();
+  } else {
+    e.target.classList.add("checked");
+  }
+});
+
+ListLiA.addEventListener("click", (e) => {
+  if (e.target.classList.contains("checked")) {
+    e.target.remove();
+  } else {
+    e.target.classList.add("checked");
+  }
+});
+
+
+
+
+
+deleteL.addEventListener("click", () => {
+  if (
+    confirm("Êtes-vous sûr de vouloir supprimer votre liste ?") ==
+    true
+  ) {
+    localStorage.removeItem("ListLiA");
+    localStorage.removeItem("ListLiF");
+    localStorage.removeItem("ListLiS");
+    location.reload()
+  } else {
+  }
+});
 
