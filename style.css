@@ -454,8 +454,10 @@ li.Hoverable.checked:hover::after {
     
   }
   #addList {
-    right: 15px;
-    font-size: 0.5rem;
+    right: 35px;
+   
+    font-size: 0.8rem;
+    padding: 10px 11px;
   }
   }
   @media screen and (max-width:450px) {
