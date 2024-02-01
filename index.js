@@ -343,7 +343,7 @@ creation.addEventListener("click", () => {
 });
 
 liste.addEventListener("click", () => {
-  window.scrollTo(0, 2000);
+  window.scrollTo(0, 1800);
 });
 ///////////////////////////////////////////
 
@@ -464,9 +464,8 @@ btnList.addEventListener("click", () => {
     ListLiF.innerHTML += `<li class="Hoverable"> ${List}</li>`;
     inputList.value = "";
     inputList.focus();
-   
     storeList();
-   console.log(inputList.value);
+  
 
   } else if (cheli2.checked) {
     ListLiS.innerHTML += `<li class="Hoverable"> ${List}</li>`;
@@ -483,13 +482,16 @@ btnList.addEventListener("click", () => {
   } else {
     alert("cocher une case");
   }
+
 });
 
 ListLiF.addEventListener("click", (e) => {
   if (e.target.classList.contains("checked")) {
     e.target.remove();
+
   } else {
     e.target.classList.add("checked");
+    
   }
 });
 
