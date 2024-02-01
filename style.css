@@ -94,7 +94,7 @@ body {
   border: solid 5px white;
   display: none;
   user-select: none;
-  margin: 10px;
+  
 }
 
 #card0 {
@@ -179,7 +179,7 @@ i:hover {
   background: rgb(95, 95, 95);
   border-radius: 20px;
   width: 80%;
-  margin: 50px auto;
+  margin: 70px auto;
   padding-top: 10px;
   position: relative;
 }
@@ -367,7 +367,7 @@ h1 {
 #sec {
   font-size: 1.5rem;
 }
-#frais {
+#autres {
   font-size: 1.5rem;
 }
 
@@ -390,6 +390,7 @@ h1 {
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: center;
   margin-left: 10px;
+  padding-bottom: 10px;
 }
 
 .checkList {
