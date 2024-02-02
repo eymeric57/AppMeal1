@@ -343,7 +343,7 @@ creation.addEventListener("click", () => {
 });
 
 liste.addEventListener("click", () => {
-  window.scrollTo(0, 1700);
+  window.scrollTo(0, 1750);
 });
 ///////////////////////////////////////////
 
@@ -356,20 +356,14 @@ b1.addEventListener("click", (e) => {
   card6.style.display = "none";
   card7.style.display = "none";
   card0.style.display = "block";
-  b1.style.color="black";
-  b1.style.backgroundColor="white"
-  b2.style.color="white";
-  b2.style.backgroundColor="rgb(36, 36, 36)"
-  b3.style.color="white";
-  b3.style.backgroundColor="rgb(36, 36, 36)"
-  b4.style.color="white";
-  b4.style.backgroundColor="rgb(36, 36, 36)"
-  b5.style.color="white";
-  b5.style.backgroundColor="rgb(36, 36, 36)"
-  b6.style.color="white";
-  b6.style.backgroundColor="rgb(36, 36, 36)"
-  b7.style.color="white";
-  b7.style.backgroundColor="rgb(36, 36, 36)"
+  b1.style.background =" #B2B206 ";
+  b2.style.background ="white";
+  b4.style.background ="white";
+  b5.style.background ="white";
+  b6.style.background ="white";
+  b7.style.background ="white";
+  
+ 
 });
 b2.addEventListener("click", (e) => {
   card0.style.display = "none";
@@ -379,20 +373,14 @@ b2.addEventListener("click", (e) => {
   card6.style.display = "none";
   card7.style.display = "none";
   card2.style.display = "block";
-  b2.style.color="black";
-  b2.style.backgroundColor="white"
-  b1.style.color="white";
-  b1.style.backgroundColor="rgb(36, 36, 36)"
-  b3.style.color="white";
-  b3.style.backgroundColor="rgb(36, 36, 36)"
-  b4.style.color="white";
-  b4.style.backgroundColor="rgb(36, 36, 36)"
-  b5.style.color="white";
-  b5.style.backgroundColor="rgb(36, 36, 36)"
-  b6.style.color="white";
-  b6.style.backgroundColor="rgb(36, 36, 36)"
-  b7.style.color="white";
-  b7.style.backgroundColor="rgb(36, 36, 36)"
+  b1.style.background ="white";
+  b2.style.background ="#B2B206 ";
+  b3.style.background ="white";
+  b4.style.background ="white";
+  b5.style.background ="white";
+  b6.style.background ="white";
+  b7.style.background ="white";
+ 
 });
 b3.addEventListener("click", (e) => {
   card0.style.display = "none";
@@ -402,20 +390,14 @@ b3.addEventListener("click", (e) => {
   card6.style.display = "none";
   card7.style.display = "none";
   card3.style.display = "block";
-  b3.style.color="black";
-  b3.style.backgroundColor="white"
-  b2.style.color="white";
-  b2.style.backgroundColor="rgb(36, 36, 36)"
-  b1.style.color="white";
-  b1.style.backgroundColor="rgb(36, 36, 36)"
-  b4.style.color="white";
-  b4.style.backgroundColor="rgb(36, 36, 36)"
-  b5.style.color="white";
-  b5.style.backgroundColor="rgb(36, 36, 36)"
-  b6.style.color="white";
-  b6.style.backgroundColor="rgb(36, 36, 36)"
-  b7.style.color="white";
-  b7.style.backgroundColor="rgb(36, 36, 36)"
+  b1.style.background ="white";
+  b2.style.background ="white";
+  b3.style.background ="#B2B206 ";
+  b4.style.background ="white";
+  b5.style.background ="white";
+  b6.style.background ="white";
+  b7.style.background ="white";
+
 });
 b4.addEventListener("click", (e) => {
   card0.style.display = "none";
@@ -425,20 +407,14 @@ b4.addEventListener("click", (e) => {
   card6.style.display = "none";
   card7.style.display = "none";
   card4.style.display = "block";
-  b4.style.color="black";
-  b4.style.backgroundColor="white"
-  b2.style.color="white";
-  b2.style.backgroundColor="rgb(36, 36, 36)"
-  b3.style.color="white";
-  b3.style.backgroundColor="rgb(36, 36, 36)"
-  b1.style.color="white";
-  b1.style.backgroundColor="rgb(36, 36, 36)"
-  b5.style.color="white";
-  b5.style.backgroundColor="rgb(36, 36, 36)"
-  b6.style.color="white";
-  b6.style.backgroundColor="rgb(36, 36, 36)"
-  b7.style.color="white";
-  b7.style.backgroundColor="rgb(36, 36, 36)"
+  b1.style.background ="white";
+  b2.style.background ="white";
+  b3.style.background ="white";
+  b4.style.background ="#B2B206 ";
+  b5.style.background ="white";
+  b6.style.background ="white";
+  b7.style.background ="white";
+
 });
 b5.addEventListener("click", (e) => {
   card0.style.display = "none";
@@ -448,20 +424,14 @@ b5.addEventListener("click", (e) => {
   card6.style.display = "none";
   card7.style.display = "none";
   card5.style.display = "block";
-  b5.style.color="black";
-  b5.style.backgroundColor="white"
-  b2.style.color="white";
-  b2.style.backgroundColor="rgb(36, 36, 36)"
-  b3.style.color="white";
-  b3.style.backgroundColor="rgb(36, 36, 36)"
-  b4.style.color="white";
-  b4.style.backgroundColor="rgb(36, 36, 36)"
-  b1.style.color="white";
-  b1.style.backgroundColor="rgb(36, 36, 36)"
-  b6.style.color="white";
-  b6.style.backgroundColor="rgb(36, 36, 36)"
-  b7.style.color="white";
-  b7.style.backgroundColor="rgb(36, 36, 36)"
+  b1.style.background ="white";
+  b2.style.background ="white";
+  b3.style.background ="white";
+  b4.style.background ="white";
+  b5.style.background ="#B2B206 ";
+  b6.style.background ="white";
+  b7.style.background ="white";
+
 });
 b6.addEventListener("click", (e) => {
   card0.style.display = "none";
@@ -471,20 +441,14 @@ b6.addEventListener("click", (e) => {
   card5.style.display = "none";
   card7.style.display = "none";
   card6.style.display = "block";
-  b6.style.color="black";
-  b6.style.backgroundColor="white"
-  b2.style.color="white";
-  b2.style.backgroundColor="rgb(36, 36, 36)"
-  b3.style.color="white";
-  b3.style.backgroundColor="rgb(36, 36, 36)"
-  b4.style.color="white";
-  b4.style.backgroundColor="rgb(36, 36, 36)"
-  b5.style.color="white";
-  b5.style.backgroundColor="rgb(36, 36, 36)"
-  b1.style.color="white";
-  b1.style.backgroundColor="rgb(36, 36, 36)"
-  b7.style.color="white";
-  b7.style.backgroundColor="rgb(36, 36, 36)"
+  b1.style.background ="white";
+  b2.style.background ="white";
+  b3.style.background ="white";
+  b4.style.background ="white";
+  b5.style.background ="white";
+  b6.style.background ="#B2B206 ";
+  b7.style.background ="white";
+
 });
 b7.addEventListener("click", (e) => {
   card0.style.display = "none";
@@ -494,20 +458,14 @@ b7.addEventListener("click", (e) => {
   card5.style.display = "none";
   card6.style.display = "none";
   card7.style.display = "block";
-  b7.style.color="black";
-  b7.style.backgroundColor="white"
-  b2.style.color="white";
-  b2.style.backgroundColor="rgb(36, 36, 36)"
-  b3.style.color="white";
-  b3.style.backgroundColor="rgb(36, 36, 36)"
-  b4.style.color="white";
-  b4.style.backgroundColor="rgb(36, 36, 36)"
-  b5.style.color="white";
-  b5.style.backgroundColor="rgb(36, 36, 36)"
-  b6.style.color="white";
-  b6.style.backgroundColor="rgb(36, 36, 36)"
-  b1.style.color="white";
-  b1.style.backgroundColor="rgb(36, 36, 36)"
+  b1.style.background ="white";
+  b2.style.background ="white";
+  b3.style.background ="white";
+  b4.style.background ="white";
+  b5.style.background ="white";
+  b6.style.background ="white";
+  b7.style.background ="#B2B206 ";
+
 });
 
 /////////////////////////////////////////////////////////
