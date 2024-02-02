@@ -88,7 +88,7 @@ getMeals();
 
 let lundiValue = localStorage.getItem("lundi");
 if (lundiValue) {
-  lu.style.backgroundColor = "green";
+  
   d1.disabled = true;
   d1.checked = true;
   d2.checked = true;
@@ -97,42 +97,42 @@ if (lundiValue) {
 
 let mardiValue = localStorage.getItem("mardi");
 if (mardiValue) {
-  ma.style.backgroundColor = "green";
+ 
   d2.disabled = true;
   d2.checked = true;
 }
 
 let mercrediValue = localStorage.getItem("mercredi");
 if (mercrediValue) {
-  me.style.backgroundColor = "green";
+  
   d3.disabled = true;
   d3.checked = true;
 }
 
 let jeudiValue = localStorage.getItem("jeudi");
 if (jeudiValue) {
-  je.style.backgroundColor = "green";
+ 
   d4.disabled = true;
   d4.checked = true;
 }
 
 let vendrediValue = localStorage.getItem("vendredi");
 if (vendrediValue) {
-  ve.style.backgroundColor = "green";
+  
   d5.disabled = true;
   d5.checked = true;
 }
 
 let samediValue = localStorage.getItem("samedi");
 if (samediValue) {
-  sa.style.backgroundColor = "green";
+  
   d6.disabled = true;
   d6.checked = true;
 }
 
 let dimancheValue = localStorage.getItem("dimanche");
 if (dimancheValue) {
-  di.style.backgroundColor = "green";
+ 
   d7.disabled = true;
   d7.checked = true;
   submit.disabled = true;
@@ -256,7 +256,7 @@ submit.addEventListener("click", () => {
     Midi.value = "";
     Soir.value = "";
     storeMeals();
-    lu.style.backgroundColor = "green";
+    
     d1.disabled = true;
     enableElements(["d2"]);
     isExecuted1 = true;
@@ -267,7 +267,7 @@ submit.addEventListener("click", () => {
     Midi.value = "";
     Soir.value = "";
     storeMeals();
-    ma.style.backgroundColor = "green";
+    
     d2.disabled = true;
     enableElements(["d3"]);
     isExecuted2 = true;
@@ -278,7 +278,7 @@ submit.addEventListener("click", () => {
     Midi.value = "";
     Soir.value = "";
     storeMeals();
-    me.style.backgroundColor = "green";
+   
     d3.disabled = true;
     enableElements(["d4"]);
     isExecuted3 = true;
@@ -289,7 +289,7 @@ submit.addEventListener("click", () => {
     Midi.value = "";
     Soir.value = "";
     storeMeals();
-    je.style.backgroundColor = "green";
+    
     d4.disabled = true;
     enableElements(["d5"]);
     isExecuted4 = true;
@@ -300,7 +300,7 @@ submit.addEventListener("click", () => {
     Midi.value = "";
     Soir.value = "";
     storeMeals();
-    ve.style.backgroundColor = "green";
+   
     d5.disabled = true;
     enableElements(["d6"]);
     isExecuted5 = true;
@@ -311,7 +311,7 @@ submit.addEventListener("click", () => {
     Midi.value = "";
     Soir.value = "";
     storeMeals();
-    sa.style.backgroundColor = "green";
+    
     d6.disabled = true;
     enableElements(["d7"]);
     isExecuted6 = true;
@@ -322,7 +322,7 @@ submit.addEventListener("click", () => {
     Midi.value = "";
     Soir.value = "";
     storeMeals();
-    di.style.backgroundColor = "green";
+    
     d7.disabled = true;
     isExecuted7 = true;
     localStorage.setItem("dimanche", "ok");
@@ -356,6 +356,20 @@ b1.addEventListener("click", (e) => {
   card6.style.display = "none";
   card7.style.display = "none";
   card0.style.display = "block";
+  b1.style.color="black";
+  b1.style.backgroundColor="white"
+  b2.style.color="white";
+  b2.style.backgroundColor="rgb(36, 36, 36)"
+  b3.style.color="white";
+  b3.style.backgroundColor="rgb(36, 36, 36)"
+  b4.style.color="white";
+  b4.style.backgroundColor="rgb(36, 36, 36)"
+  b5.style.color="white";
+  b5.style.backgroundColor="rgb(36, 36, 36)"
+  b6.style.color="white";
+  b6.style.backgroundColor="rgb(36, 36, 36)"
+  b7.style.color="white";
+  b7.style.backgroundColor="rgb(36, 36, 36)"
 });
 b2.addEventListener("click", (e) => {
   card0.style.display = "none";
@@ -365,6 +379,20 @@ b2.addEventListener("click", (e) => {
   card6.style.display = "none";
   card7.style.display = "none";
   card2.style.display = "block";
+  b2.style.color="black";
+  b2.style.backgroundColor="white"
+  b1.style.color="white";
+  b1.style.backgroundColor="rgb(36, 36, 36)"
+  b3.style.color="white";
+  b3.style.backgroundColor="rgb(36, 36, 36)"
+  b4.style.color="white";
+  b4.style.backgroundColor="rgb(36, 36, 36)"
+  b5.style.color="white";
+  b5.style.backgroundColor="rgb(36, 36, 36)"
+  b6.style.color="white";
+  b6.style.backgroundColor="rgb(36, 36, 36)"
+  b7.style.color="white";
+  b7.style.backgroundColor="rgb(36, 36, 36)"
 });
 b3.addEventListener("click", (e) => {
   card0.style.display = "none";
@@ -374,6 +402,20 @@ b3.addEventListener("click", (e) => {
   card6.style.display = "none";
   card7.style.display = "none";
   card3.style.display = "block";
+  b3.style.color="black";
+  b3.style.backgroundColor="white"
+  b2.style.color="white";
+  b2.style.backgroundColor="rgb(36, 36, 36)"
+  b1.style.color="white";
+  b1.style.backgroundColor="rgb(36, 36, 36)"
+  b4.style.color="white";
+  b4.style.backgroundColor="rgb(36, 36, 36)"
+  b5.style.color="white";
+  b5.style.backgroundColor="rgb(36, 36, 36)"
+  b6.style.color="white";
+  b6.style.backgroundColor="rgb(36, 36, 36)"
+  b7.style.color="white";
+  b7.style.backgroundColor="rgb(36, 36, 36)"
 });
 b4.addEventListener("click", (e) => {
   card0.style.display = "none";
@@ -383,6 +425,20 @@ b4.addEventListener("click", (e) => {
   card6.style.display = "none";
   card7.style.display = "none";
   card4.style.display = "block";
+  b4.style.color="black";
+  b4.style.backgroundColor="white"
+  b2.style.color="white";
+  b2.style.backgroundColor="rgb(36, 36, 36)"
+  b3.style.color="white";
+  b3.style.backgroundColor="rgb(36, 36, 36)"
+  b1.style.color="white";
+  b1.style.backgroundColor="rgb(36, 36, 36)"
+  b5.style.color="white";
+  b5.style.backgroundColor="rgb(36, 36, 36)"
+  b6.style.color="white";
+  b6.style.backgroundColor="rgb(36, 36, 36)"
+  b7.style.color="white";
+  b7.style.backgroundColor="rgb(36, 36, 36)"
 });
 b5.addEventListener("click", (e) => {
   card0.style.display = "none";
@@ -392,6 +448,20 @@ b5.addEventListener("click", (e) => {
   card6.style.display = "none";
   card7.style.display = "none";
   card5.style.display = "block";
+  b5.style.color="black";
+  b5.style.backgroundColor="white"
+  b2.style.color="white";
+  b2.style.backgroundColor="rgb(36, 36, 36)"
+  b3.style.color="white";
+  b3.style.backgroundColor="rgb(36, 36, 36)"
+  b4.style.color="white";
+  b4.style.backgroundColor="rgb(36, 36, 36)"
+  b1.style.color="white";
+  b1.style.backgroundColor="rgb(36, 36, 36)"
+  b6.style.color="white";
+  b6.style.backgroundColor="rgb(36, 36, 36)"
+  b7.style.color="white";
+  b7.style.backgroundColor="rgb(36, 36, 36)"
 });
 b6.addEventListener("click", (e) => {
   card0.style.display = "none";
@@ -401,6 +471,20 @@ b6.addEventListener("click", (e) => {
   card5.style.display = "none";
   card7.style.display = "none";
   card6.style.display = "block";
+  b6.style.color="black";
+  b6.style.backgroundColor="white"
+  b2.style.color="white";
+  b2.style.backgroundColor="rgb(36, 36, 36)"
+  b3.style.color="white";
+  b3.style.backgroundColor="rgb(36, 36, 36)"
+  b4.style.color="white";
+  b4.style.backgroundColor="rgb(36, 36, 36)"
+  b5.style.color="white";
+  b5.style.backgroundColor="rgb(36, 36, 36)"
+  b1.style.color="white";
+  b1.style.backgroundColor="rgb(36, 36, 36)"
+  b7.style.color="white";
+  b7.style.backgroundColor="rgb(36, 36, 36)"
 });
 b7.addEventListener("click", (e) => {
   card0.style.display = "none";
@@ -410,6 +494,20 @@ b7.addEventListener("click", (e) => {
   card5.style.display = "none";
   card6.style.display = "none";
   card7.style.display = "block";
+  b7.style.color="black";
+  b7.style.backgroundColor="white"
+  b2.style.color="white";
+  b2.style.backgroundColor="rgb(36, 36, 36)"
+  b3.style.color="white";
+  b3.style.backgroundColor="rgb(36, 36, 36)"
+  b4.style.color="white";
+  b4.style.backgroundColor="rgb(36, 36, 36)"
+  b5.style.color="white";
+  b5.style.backgroundColor="rgb(36, 36, 36)"
+  b6.style.color="white";
+  b6.style.backgroundColor="rgb(36, 36, 36)"
+  b1.style.color="white";
+  b1.style.backgroundColor="rgb(36, 36, 36)"
 });
 
 /////////////////////////////////////////////////////////
