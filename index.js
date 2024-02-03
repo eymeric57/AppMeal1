@@ -468,8 +468,7 @@ b7.addEventListener("click", (e) => {
 
 });
 
-/////////////////////////////////////////////////////////
-/////////////////////List /////////////////
+//////////////////////////////////////////////List //////////////////////////////////////////
 
 function storeList() {
   window.localStorage.ListLiF = ListLiF.innerHTML;
@@ -484,6 +483,9 @@ function getList() {
 }
 
 getList();
+
+
+////////////////* function checkbox List */////////////////////////////
 
 function checkLi1() {
   if (cheli1.checked) {
@@ -541,6 +543,8 @@ btnList.addEventListener("click", () => {
 
 });
 
+////////////////////////* Delete List item */////////////////////
+
 ListLiF.addEventListener("click", (e) => {
   if (e.target.classList.contains("checked")) {
     e.target.remove();
@@ -568,7 +572,7 @@ ListLiA.addEventListener("click", (e) => {
 });
 
 
-
+////////////////*Delete local storage List*///////////////
 
 
 deleteL.addEventListener("click", () => {

@@ -86,7 +86,7 @@ h1 {
 }
 .title h1 {
 
-  font-family: Lovelo,sans-serif;
+  font-family: Lovelo,serif;
   font-weight: 700;
   font-style:normal;
   font-size: 1.9rem;
@@ -197,11 +197,11 @@ i:hover {
 }
 
 .ProgPart {
-  height: 800px;
+  height: 900px;
   background-image: url(./assets/pasta.png);
   background-size: contain;
   z-index: 2;
-  padding-top: 130px;
+  padding-top: 10px;
 }
 
 .boxDay {
@@ -211,7 +211,7 @@ i:hover {
   margin: -50px auto 0;
   position: relative;
   z-index: 1;
-  height: 700px;
+  height: 800px;
 }
 
 .boxDay h4 {
@@ -222,13 +222,14 @@ i:hover {
  padding-top: 30px;
  font-family: levolo, sans-serif;
  text-transform: uppercase;
+ margin-top: 40px;
 }
 h4::before {
   content: "";
   border: solid rgb(150, 150, 150) 1px;
   display: block;
   width: 80%;
-  margin: 80px auto 50px;
+  margin: 150px auto 50px;
 }
 h4::after {
   content: "";
@@ -243,7 +244,7 @@ h5 {
   color: rgb(10, 10, 10);
   font-size: 1.8rem;
   user-select: none;
-  margin: 40px auto;
+  margin: 10px auto;
 }
 
 #Midi {
@@ -278,9 +279,11 @@ h5 {
   cursor: pointer;
 }
 .DayCheckCreat {
-  height: 150px;
+  height: 90px;
   background: white;
   width: 100%;
+  top: 0;
+  padding-top: 30px;
 
 }
 .Day {
@@ -289,9 +292,7 @@ h5 {
   justify-content: center;
   user-select: none;
   background: white;
-  padding-top: 50px;
-
- 
+  padding-top: -50px;
 
 }
 .Day p {
@@ -382,13 +383,14 @@ h5 {
 #SectionBottom {
   background-image: url(./assets/pasta.png);
   background-size: contain;
+  height: 100vh;
 }
 
 .Listbox {
-  height: 755px;
+  height: 765px;
   width: 60%;
   max-width: 800px;
-  margin: 0px auto 50px;
+  margin: 0 auto ;
  
   position: relative;
   background: white;
@@ -403,19 +405,22 @@ h1 {
   padding: 10px;
   user-select: none;
 }
-h5 {
+.Listbox h5 {
   text-align: center;
   font-size: 2rem;
   font-family: levolo , sans-serif;
   color: black;
   padding: 10px;
   user-select: none;
+  margin-top: 50px;
 
 }
 
 .inputList {
   position: relative;
 }
+
+
 
 #inputList {
   text-align: center;
@@ -425,32 +430,52 @@ h5 {
   height: 40px;
   text-align: center;
 }
+.inputList::after {
+  content: "";
+  border: 1px #B2B206 solid;
+  display: block;
+  width: 80%;
+  margin: 60px auto 20px;
+}
 
-#addList {
+#addList  {
   color: rgb(83, 83, 83);
-  background: white;
+  background: rgb(184, 16, 16);
   padding: 10px;
+  margin-left: 50px;
   position: absolute;
-  right: 20px;
-  bottom: 5px;
+
+
+
+  
+}
+
+#frais::before {
+  content: "";
+  border: 1px #B2B206 solid;
+  display: block;
+  width: 80%;
+  margin: 20px auto 20px;
 }
 .frais {
   text-align: center;
 }
 #frais {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 .sec {
   text-align: center;
+
 }
 #sec {
   font-size: 1.5rem;
 }
 .autres {
   text-align: center;
+
 }
 #autres {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 h6 {
@@ -482,9 +507,11 @@ h6 {
 .checkList {
   display: flex;
   justify-content: space-around;
-  text-align: left;
-  margin-top: 50px;
+  margin-top: 10px;
+  padding: 10px;
+ 
 }
+
 
 label {
   font-size: 1.5rem;
@@ -507,6 +534,7 @@ li.Hoverable::before {
   font-weight: 900;
   font-size: 0.8rem;
   align-items: center;
+ 
 }
 li.Hoverable.checked {
   color: grey;
@@ -530,11 +558,11 @@ li.Hoverable.checked:hover::after {
 
 #deleteL {
   color: rgb(83, 83, 83);
-  background: white;
+  background: rgb(0, 0, 0);
   padding: 10px;
   position: absolute;
   left: 10px;
-  top: 300px;
+  bottom: 0px;
 }
 
 
