@@ -1,5 +1,5 @@
 html {
-  overflow-y: idden;
+  overflow-y: hidden;
 }
 
 * {
@@ -39,10 +39,11 @@ z-index: 10;
  
 }
 #firstul li {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-family: versailles, sans-serif;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 700;
+  color: black;
   
   
 }
@@ -67,14 +68,14 @@ z-index: 10;
 
  h1::before {
   content: "";
-  border: solid rgb(150, 150, 150) 1px;
+  border: solid #B2B206 1px;
   display: block;
   width: 80%;
   margin: 80px auto 30px;
 }
 h1::after {
   content: "";
-  border: solid rgb(150, 150, 150) 1px;
+  border: solid#B2B206 1px;
   display: block;
   width: 80%;
   margin: 20px auto 20px;
@@ -91,7 +92,7 @@ h1 {
   font-style:normal;
   font-size: 1.9rem;
   line-height: 2;
-  color:rgb(65, 64, 64);
+  color:rgb(31, 30, 30);
   user-select: none;
   background: white;
   margin: 0 auto 40px ;
@@ -220,20 +221,20 @@ i:hover {
   font-size: 2rem;
   user-select: none;
  padding-top: 30px;
- font-family: levolo, sans-serif;
+ font-family: lovelo, sans-serif;
  text-transform: uppercase;
  margin-top: 40px;
 }
 h4::before {
   content: "";
-  border: solid rgb(150, 150, 150) 1px;
+  border: solid  #B2B206 1px;
   display: block;
   width: 80%;
   margin: 150px auto 50px;
 }
 h4::after {
   content: "";
-  border: solid rgb(150, 150, 150) 1px;
+  border: solid #B2B206 1px;
   display: block;
   width: 80%;
   margin: 50px auto 30px;
@@ -373,7 +374,7 @@ h5 {
 
 #refreshArrow {
   color: rgb(83, 83, 83);
-  background: white;
+  background: #B2B206;
   padding: 10px;
   position: absolute;
   right: 20px;
@@ -387,7 +388,7 @@ h5 {
 }
 
 .Listbox {
-  height: 765px;
+  height: 680px;
   width: 60%;
   max-width: 800px;
   margin: 0 auto ;
@@ -400,7 +401,7 @@ h5 {
 h1 {
   text-align: center;
   font-size: 2rem;
-  font-family: levolo , sans-serif;
+  font-family: lovelo , sans-serif;
   color: white;
   padding: 10px;
   user-select: none;
@@ -408,7 +409,7 @@ h1 {
 .Listbox h5 {
   text-align: center;
   font-size: 2rem;
-  font-family: levolo , sans-serif;
+  font-family: lovelo , sans-serif;
   color: black;
   padding: 10px;
   user-select: none;
@@ -437,17 +438,19 @@ h1 {
   width: 80%;
   margin: 60px auto 20px;
 }
-
+.btnList {
+  width: 100%;
+  position: relative;
+}
 #addList  {
   color: rgb(83, 83, 83);
-  background: rgb(184, 16, 16);
+  background: #B2B206;
   padding: 10px;
-  margin-left: 50px;
-  position: absolute;
-
-
-
-  
+ top: 30px;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ position: absolute;
+ 
 }
 
 #frais::before {
@@ -462,13 +465,15 @@ h1 {
 }
 #frais {
   font-size: 1.2rem;
+  font-family: lovelo, sans-serif;
 }
 .sec {
   text-align: center;
 
 }
 #sec {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  font-family: lovelo, sans-serif;
 }
 .autres {
   text-align: center;
@@ -476,6 +481,7 @@ h1 {
 }
 #autres {
   font-size: 1.2rem;
+  font-family: lovelo, sans-serif;
 }
 
 h6 {
@@ -547,26 +553,21 @@ li.Hoverable.checked:before {
   color: #fd4a1d;
 }
 
-li.Hoverable.checked:hover::after {
-  cursor: pointer;
-  color: rgb(223, 68, 11);
-  content: "(sup)";
-  font-size: 0.8rem;
-  font-weight: 700;
-}
+
 
 
 #deleteL {
   color: rgb(83, 83, 83);
-  background: rgb(0, 0, 0);
+  background: #B2B206;
   padding: 10px;
   position: absolute;
-  left: 10px;
-  bottom: 0px;
+ right: 20px;
+ bottom: 30px;
 }
 
-
-
-
-
-
+.bottom {
+background: rgb(255, 255, 255);
+bottom: 0;
+  height: 100px;
+  position: relative;
+}

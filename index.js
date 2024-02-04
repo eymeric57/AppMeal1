@@ -517,7 +517,7 @@ inputList.addEventListener("input", (e) => {
   List = e.target.value;
 });
 
-btnList.addEventListener("click", () => {
+addList.addEventListener("click", () => {
   if (cheli1.checked) {
     ListLiF.innerHTML += `<li class="Hoverable"> ${List}</li>`;
     inputList.value = "";
