@@ -143,13 +143,8 @@ refreshArrow.addEventListener("click", () => {
     confirm("Êtes-vous sûr de vouloir supprimer les plats de la semaine ?") ==
     true
   ) {
-    localStorage.removeItem('lundi');
-    localStorage.removeItem('mardi');
-    localStorage.removeItem('mercredi');
-    localStorage.removeItem('jeudi');
-    localStorage.removeItem('vendredi');
-    localStorage.removeItem('samedi');
-    localStorage.removeItem('dimanche');
+    console.log("yes");
+    localStorage.clear()
     location.reload();
   } else {
   }
@@ -335,15 +330,22 @@ submit.addEventListener("click", () => {
 ///////////////////////////////////////////Scroll///////////////////////////
 
 menu.addEventListener("click", () => {
-  window.scrollTo(910, 0);
+  FirstPage.style.display="block"
+  SecondPage.style.display ="none"
+  SectionBottom.style.display="none"
 });
 
 creation.addEventListener("click", () => {
-  window.scrollTo(0, 910);
+ FirstPage.style.display="none"
+ SecondPage.style.display ="block"
+ SectionBottom.style.display="none"
+
 });
 
 liste.addEventListener("click", () => {
-  window.scrollTo(0, 1750);
+  FirstPage.style.display="none"
+  SecondPage.style.display ="none"
+  SectionBottom.style.display="block"
 });
 ///////////////////////////////////////////
 
@@ -572,19 +574,5 @@ ListLiA.addEventListener("click", (e) => {
 });
 
 
-////////////////*Delete local storage List*///////////////
 
-
-deleteL.addEventListener("click", () => {
-  if (
-    confirm("Êtes-vous sûr de vouloir supprimer votre liste ?") ==
-    true
-  ) {
-    localStorage.removeItem("ListLiA");
-    localStorage.removeItem("ListLiF");
-    localStorage.removeItem("ListLiS");
-    location.reload()
-  } else {
-  }
-});
 
