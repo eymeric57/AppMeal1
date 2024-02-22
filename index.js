@@ -19,23 +19,6 @@ let soi6 = "";
 let mid7 = "";
 let soi7 = "";
 
-let isExecuted1 = false;
-let isExecuted2 = false;
-let isExecuted3 = false;
-let isExecuted4 = false;
-let isExecuted5 = false;
-let isExecuted6 = false;
-let isExecuted7 = false;
-
-d1.checked = true;
-d1.style.pointerEvents = "none";
-d2.style.pointerEvents = "none";
-d3.style.pointerEvents = "none";
-d4.style.pointerEvents = "none";
-d5.style.pointerEvents = "none";
-d6.style.pointerEvents = "none";
-d7.style.pointerEvents = "none";
-
 ////////////////////////Local Storage
 
 function storeMeals() {
@@ -87,56 +70,18 @@ function getMeals() {
 getMeals();
 
 let lundiValue = localStorage.getItem("lundi");
-if (lundiValue) {
-  
-  d1.disabled = true;
-  d1.checked = true;
-  d2.checked = true;
-  d2.disabled = false;
-}
 
 let mardiValue = localStorage.getItem("mardi");
-if (mardiValue) {
- 
-  d2.disabled = true;
-  d2.checked = true;
-}
 
 let mercrediValue = localStorage.getItem("mercredi");
-if (mercrediValue) {
-  
-  d3.disabled = true;
-  d3.checked = true;
-}
 
 let jeudiValue = localStorage.getItem("jeudi");
-if (jeudiValue) {
- 
-  d4.disabled = true;
-  d4.checked = true;
-}
 
 let vendrediValue = localStorage.getItem("vendredi");
-if (vendrediValue) {
-  
-  d5.disabled = true;
-  d5.checked = true;
-}
 
 let samediValue = localStorage.getItem("samedi");
-if (samediValue) {
-  
-  d6.disabled = true;
-  d6.checked = true;
-}
 
 let dimancheValue = localStorage.getItem("dimanche");
-if (dimancheValue) {
- 
-  d7.disabled = true;
-  d7.checked = true;
-  submit.disabled = true;
-}
 
 refreshArrow.addEventListener("click", () => {
   if (
@@ -144,7 +89,7 @@ refreshArrow.addEventListener("click", () => {
     true
   ) {
     console.log("yes");
-    localStorage.clear()
+    localStorage.clear();
     location.reload();
   } else {
   }
@@ -210,106 +155,149 @@ Soir.addEventListener("input", (e) => {
   soi7 = e.target.value;
   storeList();
 });
-
 //////////////////////////////////////////////////////////
 
 ///////////////////////////////////CheckBox //////////////////////////
 
-function disableElements(e) {
-  e.forEach((elementId) => {
-    document.getElementById(elementId).disabled = true;
-  });
+function checkd1() {
+  if (d1.checked) {
+    d2.checked = false;
+    d3.checked = false;
+    d4.checked = false;
+    d5.checked = false;
+    d6.checked = false;
+    d7.checked = false;
+  }
+}
+function checkd2() {
+  if (d2.checked) {
+    d1.checked = false;
+    d3.checked = false;
+    d4.checked = false;
+    d5.checked = false;
+    d6.checked = false;
+    d7.checked = false;
+  }
+}
+function checkd3() {
+  if (d3.checked) {
+    d1.checked = false;
+    d2.checked = false;
+    d4.checked = false;
+    d5.checked = false;
+    d6.checked = false;
+    d7.checked = false;
+  }
+}
+function checkd4() {
+  if (d4.checked) {
+    d1.checked = false;
+    d2.checked = false;
+    d3.checked = false;
+    d5.checked = false;
+    d6.checked = false;
+    d7.checked = false;
+  }
+}
+function checkd5() {
+  if (d5.checked) {
+    d1.checked = false;
+    d2.checked = false;
+    d3.checked = false;
+    d4.checked = false;
+    d6.checked = false;
+    d7.checked = false;
+  }
+}
+function checkd6() {
+  if (d6.checked) {
+    d1.checked = false;
+    d2.checked = false;
+    d3.checked = false;
+    d4.checked = false;
+    d5.checked = false;
+    d7.checked = false;
+  }
+}
+function checkd7() {
+  if (d7.checked) {
+    d1.checked = false;
+    d2.checked = false;
+    d3.checked = false;
+    d4.checked = false;
+    d5.checked = false;
+    d6.checked = false;
+  }
 }
 
-function enableElements(e) {
-  e.forEach((elementId) => {
-    {
-      document.getElementById(elementId).disabled = false;
-    }
-  });
-}
-
-function dayoff() {
-  d2.disabled = true;
-  d3.disabled = true;
-  d4.disabled = true;
-  d5.disabled = true;
-  d6.disabled = true;
-  d7.disabled = true;
-}
-
-dayoff();
+d1.addEventListener("change", checkd1);
+checkd1();
+d2.addEventListener("change", checkd2);
+checkd2();
+d3.addEventListener("change", checkd3);
+checkd3();
+d4.addEventListener("change", checkd4);
+checkd4();
+d5.addEventListener("change", checkd5);
+checkd5();
+d6.addEventListener("change", checkd6);
+checkd6();
+d7.addEventListener("change", checkd7);
+checkd7();
 
 /////////////////////////////////////
 
 ///////////////////////////EventListener routine//////////////////////////////////
 
-
 submit.addEventListener("click", () => {
-  if (d1.checked && !isExecuted1) {
+  if (d1.checked) {
     update1();
     Midi.value = "";
     Soir.value = "";
     storeMeals();
-    
-    d1.disabled = true;
-    enableElements(["d2"]);
-    isExecuted1 = true;
+    d1.checked = false;
     d2.checked = true;
     localStorage.setItem("lundi", "ok");
-  } else if (d2.checked && !isExecuted2) {
+  } else if (d2.checked) {
     update2();
     Midi.value = "";
     Soir.value = "";
     storeMeals();
-    
-    d2.disabled = true;
-    enableElements(["d3"]);
-    isExecuted2 = true;
+    d2.checked = false;
     d3.checked = true;
     localStorage.setItem("mardi", "ok");
-  } else if (d3.checked && !isExecuted3) {
+  } else if (d3.checked) {
     update3();
     Midi.value = "";
     Soir.value = "";
     storeMeals();
-   
-    d3.disabled = true;
-    enableElements(["d4"]);
-    isExecuted3 = true;
+
+    d3.checked = false;
     d4.checked = true;
     localStorage.setItem("mercredi", "ok");
-  } else if (d4.checked && !isExecuted4) {
+  } else if (d4.checked) {
     update4();
     Midi.value = "";
     Soir.value = "";
     storeMeals();
-    
-    d4.disabled = true;
-    enableElements(["d5"]);
-    isExecuted4 = true;
+    d4.checked = false;
     d5.checked = true;
     localStorage.setItem("jeudi", "ok");
-  } else if (d5.checked && !isExecuted5) {
+  } else if (d5.checked) {
     update5();
     Midi.value = "";
     Soir.value = "";
     storeMeals();
-   
-    d5.disabled = true;
-    enableElements(["d6"]);
-    isExecuted5 = true;
+    d5.checked = false;
     d6.checked = true;
     localStorage.setItem("vendredi", "ok");
-  } else if (d6.checked && !isExecuted6) {
+  } else if (d6.checked) {
     update6();
     Midi.value = "";
     Soir.value = "";
     storeMeals();
-    
-    d6.disabled = true;
-    enableElements(["d7"]);
-    isExecuted6 = true;
+
+    d6.checked = false;
     d7.checked = true;
     localStorage.setItem("samedi", "ok");
   } else if (d7.checked && !isExecuted7) {
@@ -317,9 +305,6 @@ submit.addEventListener("click", () => {
     Midi.value = "";
     Soir.value = "";
     storeMeals();
-    
-    d7.disabled = true;
-    isExecuted7 = true;
     localStorage.setItem("dimanche", "ok");
     submit.disabled = true;
   }
@@ -330,22 +315,21 @@ submit.addEventListener("click", () => {
 ///////////////////////////////////////////Scroll///////////////////////////
 
 menu.addEventListener("click", () => {
-  FirstPage.style.display="block"
-  SecondPage.style.display ="none"
-  SectionBottom.style.display="none"
+  FirstPage.style.display = "block";
+  SecondPage.style.display = "none";
+  SectionBottom.style.display = "none";
 });
 
 creation.addEventListener("click", () => {
- FirstPage.style.display="none"
- SecondPage.style.display ="block"
- SectionBottom.style.display="none"
-
+  FirstPage.style.display = "none";
+  SecondPage.style.display = "block";
+  SectionBottom.style.display = "none";
 });
 
 liste.addEventListener("click", () => {
-  FirstPage.style.display="none"
-  SecondPage.style.display ="none"
-  SectionBottom.style.display="block"
+  FirstPage.style.display = "none";
+  SecondPage.style.display = "none";
+  SectionBottom.style.display = "block";
 });
 ///////////////////////////////////////////
 
@@ -358,14 +342,12 @@ b1.addEventListener("click", (e) => {
   card6.style.display = "none";
   card7.style.display = "none";
   card0.style.display = "block";
-  b1.style.background =" #B2B206 ";
-  b2.style.background ="white";
-  b4.style.background ="white";
-  b5.style.background ="white";
-  b6.style.background ="white";
-  b7.style.background ="white";
-  
- 
+  b1.style.background = " #B2B206 ";
+  b2.style.background = "white";
+  b4.style.background = "white";
+  b5.style.background = "white";
+  b6.style.background = "white";
+  b7.style.background = "white";
 });
 b2.addEventListener("click", (e) => {
   card0.style.display = "none";
@@ -375,14 +357,13 @@ b2.addEventListener("click", (e) => {
   card6.style.display = "none";
   card7.style.display = "none";
   card2.style.display = "block";
-  b1.style.background ="white";
-  b2.style.background ="#B2B206 ";
-  b3.style.background ="white";
-  b4.style.background ="white";
-  b5.style.background ="white";
-  b6.style.background ="white";
-  b7.style.background ="white";
- 
+  b1.style.background = "white";
+  b2.style.background = "#B2B206 ";
+  b3.style.background = "white";
+  b4.style.background = "white";
+  b5.style.background = "white";
+  b6.style.background = "white";
+  b7.style.background = "white";
 });
 b3.addEventListener("click", (e) => {
   card0.style.display = "none";
@@ -392,14 +373,13 @@ b3.addEventListener("click", (e) => {
   card6.style.display = "none";
   card7.style.display = "none";
   card3.style.display = "block";
-  b1.style.background ="white";
-  b2.style.background ="white";
-  b3.style.background ="#B2B206 ";
-  b4.style.background ="white";
-  b5.style.background ="white";
-  b6.style.background ="white";
-  b7.style.background ="white";
-
+  b1.style.background = "white";
+  b2.style.background = "white";
+  b3.style.background = "#B2B206 ";
+  b4.style.background = "white";
+  b5.style.background = "white";
+  b6.style.background = "white";
+  b7.style.background = "white";
 });
 b4.addEventListener("click", (e) => {
   card0.style.display = "none";
@@ -409,14 +389,13 @@ b4.addEventListener("click", (e) => {
   card6.style.display = "none";
   card7.style.display = "none";
   card4.style.display = "block";
-  b1.style.background ="white";
-  b2.style.background ="white";
-  b3.style.background ="white";
-  b4.style.background ="#B2B206 ";
-  b5.style.background ="white";
-  b6.style.background ="white";
-  b7.style.background ="white";
-
+  b1.style.background = "white";
+  b2.style.background = "white";
+  b3.style.background = "white";
+  b4.style.background = "#B2B206 ";
+  b5.style.background = "white";
+  b6.style.background = "white";
+  b7.style.background = "white";
 });
 b5.addEventListener("click", (e) => {
   card0.style.display = "none";
@@ -426,14 +405,13 @@ b5.addEventListener("click", (e) => {
   card6.style.display = "none";
   card7.style.display = "none";
   card5.style.display = "block";
-  b1.style.background ="white";
-  b2.style.background ="white";
-  b3.style.background ="white";
-  b4.style.background ="white";
-  b5.style.background ="#B2B206 ";
-  b6.style.background ="white";
-  b7.style.background ="white";
-
+  b1.style.background = "white";
+  b2.style.background = "white";
+  b3.style.background = "white";
+  b4.style.background = "white";
+  b5.style.background = "#B2B206 ";
+  b6.style.background = "white";
+  b7.style.background = "white";
 });
 b6.addEventListener("click", (e) => {
   card0.style.display = "none";
@@ -443,14 +421,13 @@ b6.addEventListener("click", (e) => {
   card5.style.display = "none";
   card7.style.display = "none";
   card6.style.display = "block";
-  b1.style.background ="white";
-  b2.style.background ="white";
-  b3.style.background ="white";
-  b4.style.background ="white";
-  b5.style.background ="white";
-  b6.style.background ="#B2B206 ";
-  b7.style.background ="white";
-
+  b1.style.background = "white";
+  b2.style.background = "white";
+  b3.style.background = "white";
+  b4.style.background = "white";
+  b5.style.background = "white";
+  b6.style.background = "#B2B206 ";
+  b7.style.background = "white";
 });
 b7.addEventListener("click", (e) => {
   card0.style.display = "none";
@@ -460,14 +437,13 @@ b7.addEventListener("click", (e) => {
   card5.style.display = "none";
   card6.style.display = "none";
   card7.style.display = "block";
-  b1.style.background ="white";
-  b2.style.background ="white";
-  b3.style.background ="white";
-  b4.style.background ="white";
-  b5.style.background ="white";
-  b6.style.background ="white";
-  b7.style.background ="#B2B206 ";
-
+  b1.style.background = "white";
+  b2.style.background = "white";
+  b3.style.background = "white";
+  b4.style.background = "white";
+  b5.style.background = "white";
+  b6.style.background = "white";
+  b7.style.background = "#B2B206 ";
 });
 
 //////////////////////////////////////////////List //////////////////////////////////////////
@@ -485,7 +461,6 @@ function getList() {
 }
 
 getList();
-
 
 ////////////////* function checkbox List */////////////////////////////
 
@@ -525,24 +500,21 @@ addList.addEventListener("click", () => {
     inputList.value = "";
     inputList.focus();
     storeList();
-  
-
   } else if (cheli2.checked) {
     ListLiS.innerHTML += `<li class="Hoverable"> ${List}</li>`;
-    localStorage.getItem('l2')
+    localStorage.getItem("l2");
     inputList.value = "";
     inputList.focus();
     storeList();
   } else if (cheli3.checked) {
     ListLiA.innerHTML += `<li class="Hoverable"> ${List}</li>`;
-    localStorage.getItem('l3')
+    localStorage.getItem("l3");
     inputList.value = "";
     inputList.focus();
     storeList();
   } else {
     alert("cocher une case");
   }
-
 });
 
 ////////////////////////* Delete List item */////////////////////
@@ -550,16 +522,16 @@ addList.addEventListener("click", () => {
 ListLiF.addEventListener("click", (e) => {
   if (e.target.classList.contains("checked")) {
     e.target.remove();
-
+    storeList();
   } else {
     e.target.classList.add("checked");
-    
   }
 });
 
 ListLiS.addEventListener("click", (e) => {
   if (e.target.classList.contains("checked")) {
     e.target.remove();
+    storeList();
   } else {
     e.target.classList.add("checked");
   }
@@ -568,11 +540,8 @@ ListLiS.addEventListener("click", (e) => {
 ListLiA.addEventListener("click", (e) => {
   if (e.target.classList.contains("checked")) {
     e.target.remove();
+    storeList();
   } else {
     e.target.classList.add("checked");
   }
 });
-
-
-
-
